@@ -1,4 +1,6 @@
 # property-instantsearch
+
+[![Join the chat at https://gitter.im/monthly-cloud/property-instantsearch](https://badges.gitter.im/monthly-cloud/property-instantsearch.svg)](https://gitter.im/monthly-cloud/property-instantsearch?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 InstantSearch.js + Vue for property listings
 
 # Requirements
