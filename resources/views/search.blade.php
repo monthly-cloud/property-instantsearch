@@ -32,7 +32,7 @@
                         <div class="container-fluid" id="results">
                             <div class="row" id="hits">
                                 <ais-results>
-                                    <template scope="{ result }">
+                                    <template slot-scope="{ result }">
                                         <search-result :result="result"></search-result>
                                     </template>
                                 </ais-results>
@@ -55,7 +55,7 @@
                     <div id="map">
                         <gmap-map :center="{lat: 37.7577627, lng: -122.4726194}" style="height: 800px;" :zoom="12">
                             <ais-results>
-                                <template scope="{ result }">
+                                <template slot-scope="{ result }">
                                     <gmap-marker :position="result._geoloc"></gmap-marker>
                                 </template>
                             </ais-results>
