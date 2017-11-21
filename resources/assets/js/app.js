@@ -19,6 +19,9 @@ Vue.use(VueGoogleMaps, {
     }
 });
 
+// vuex
+import { store } from './store/store';
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -28,5 +31,6 @@ Vue.use(VueGoogleMaps, {
 Vue.component('search-result', require('./components/SearchResult.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    store,
 });
