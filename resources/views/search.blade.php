@@ -3,7 +3,7 @@
 @section('title', 'Search')
 
 @section('content')
-    <ais-index app-id="{{env('ALGOLIA_APP_ID')}}" api-key="{{env('ALGOLIA_SEARCH')}}" index-name="homes">
+    <ais-index app-id="{{config('algolia.id')}}" api-key="{{config('algolia.search')}}" index-name="results">
         <div class="container-fluid" style="padding-left: 0; padding-right: 0;">
             <header class="navbar navbar-static-top aisdemo-navbar">
                 <a href="https://community.algolia.com/vue-instantsearch/" class="logo">

@@ -1,7 +1,7 @@
 <template>
     <div class="hit col-sm-4">
         <div class="pictures-wrapper">
-            <img class="picture" :src="result.picture_url">
+            <img class="picture" :src="result.thumbnail_url">
         </div>
 
         <div class="infos">
