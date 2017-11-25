@@ -25,6 +25,7 @@ class CreateResultsTable extends Migration
             $table->dateTimeTz('available_from')->nullable();
             $table->decimal('lat', 10, 8)->nullable();
             $table->decimal('lng', 11, 8)->nullable();
+            $table->string('user_thumbnail_url')->nullable();
             $table->string('thumbnail_url')->nullable();
             $table->timestamps();
         });
