@@ -12,7 +12,7 @@ class ResultsTableSeeder extends Seeder
      */
     public function run()
     {
-    	Result::truncate();
+        Result::truncate();
 
         $data = json_decode(File::get(resource_path('datasets/properties.json')), true);
         foreach ($data as $item) {
