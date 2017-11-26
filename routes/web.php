@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('search');
 });
+
+Route::get('/autocomplete', function () {
+    return view('autocomplete');
+});
