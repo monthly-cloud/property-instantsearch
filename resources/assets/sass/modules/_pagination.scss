@@ -1,0 +1,41 @@
+/* PAGINATION
+// ------------------------- */
+
+.ais-pagination {
+    @extend .pagination;
+}
+
+#pagination {
+    text-align: center;
+}
+#pagination .ais-pagination__item {
+    display: inline-block;
+    margin: 1px;
+}
+#pagination .ais-pagination__link {
+    color: #FF585B;
+    border-radius: 4px;
+    background: transparent;
+}
+#pagination .ais-pagination > .ais-pagination__item--active > a {
+    color: #FFFFFF;
+    border-color: #FF585B;
+    background: #FF585B;
+}
+#pagination .ais-pagination > li > a:focus, #pagination .ais-pagination > li > a:hover, #pagination .ais-pagination > li > span:focus, #pagination .ais-pagination > li > span:hover {
+    color: #FFFFFF;
+    border-color: #FF585B;
+    background: #FF585B;
+}
+
+.thank-you {
+    text-align: center;
+    font-size: .8em;
+}
+.thank-you a {
+    color: #FF585B;
+}
+
+.ais-price-range__input {
+    width: 64px;
+}

@@ -1,0 +1,37 @@
+/* HEADER
+// ------------------------- */
+.aisdemo-navbar {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #DCE0E0;
+    position: relative;
+}
+.aisdemo-navbar .logo {
+    display: inline-block;
+    padding: 14px 22px;
+    font-size: 40px;
+    line-height: 1;
+    font-family: Courier;
+    color: #FF585B;
+    border-right: 1px solid #DCE0E0;
+}
+.aisdemo-navbar .fa-search {
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    color: #DCE0E0;
+}
+.aisdemo-navbar .ais-input {
+    position: absolute;
+    top: 21px;
+    left: 140px;
+    width: 50%;
+    border: 0;
+    font-size: 21px;
+    box-shadow: none;
+}
+.aisdemo-navbar .ais-input:focus {
+    outline: none;
+    box-shadow: none;
+}
