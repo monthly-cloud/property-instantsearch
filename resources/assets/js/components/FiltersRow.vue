@@ -25,16 +25,6 @@
         class="expanded-filter__overlay"
         @click="cleanFilters()"></div>
     </div>
-    <!-- <div class="aisdemo-filters">
-        <div class="row aisdemo-filter">
-            <div class="col-sm-2 aisdemo-filter-title">Dates</div>
-            <div class="col-sm-3"><input class="date form-control" value="16/01/2016" disabled /></div>
-        </div>
-        <div id="room_types" class="row aisdemo-filter">
-            <div class="col-sm-2 aisdemo-filter-title">Room Type</div>
-                <ais-refinement-list attribute-name="room_type"></ais-refinement-list>
-        </div>
-    </div>  -->
 </template>
 
 <script>
