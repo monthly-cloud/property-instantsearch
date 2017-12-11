@@ -3,6 +3,8 @@
 #results {
     padding: 40px 20px;
     background: #EDEFED;
+    max-height: calc(100vh - 138px);
+    overflow: scroll;
 }
 
 #hits .hit .pictures-wrapper {
