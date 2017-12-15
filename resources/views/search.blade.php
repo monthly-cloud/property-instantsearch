@@ -16,18 +16,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-7 aisdemo--left-column">
-                    <div class="aisdemo-filters">
-                        <!-- Dates & Guests -->
-                        <div class="row aisdemo-filter">
-                            <div class="col-sm-2 aisdemo-filter-title">Dates</div>
-                            <div class="col-sm-3"><input class="date form-control" value="16/01/2016" disabled /></div>
-                        </div>
-                        <!-- Room types -->
-                        <div id="room_types" class="row aisdemo-filter">
-                            <div class="col-sm-2 aisdemo-filter-title">Room Type</div>
-                                <ais-refinement-list attribute-name="room_type"></ais-refinement-list>
-                        </div>
-                    </div>
+                    <filters-row>
+                    </filters-row>
                     <div class="row">
                         <div class="container-fluid" id="results">
                             <div class="row" id="hits">
@@ -51,9 +41,9 @@
                 <!-- /Left col -->
 
                 <!-- Right col -->
-                <div class="col-sm-5 aisdemo--right-column">
+                <div class="col-sm-5 hidden-xs aisdemo--right-column">
                     <div id="map">
-                        <gmap-map :center="{lat: 37.7577627, lng: -122.4726194}" style="height: 800px;" :zoom="12">
+                        <gmap-map :center="{lat: 37.7577627, lng: -122.4726194}" :zoom="12">
                             <ais-results>
                                 <template slot-scope="{ result }">
                                     <gmap-marker :position="result._geoloc"></gmap-marker>

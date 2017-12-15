@@ -29,6 +29,7 @@ import { store } from './store/store';
  */
 
 Vue.component('search-result', require('./components/SearchResult.vue'));
+Vue.component('filters-row', require('./components/FiltersRow.vue'));
 
 const app = new Vue({
     el: '#app',
