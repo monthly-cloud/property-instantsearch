@@ -28,6 +28,8 @@ import { store } from './store/store';
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.component('ais-form', require('./components/Form.vue'));
+Vue.component('ais-autocomplete', require('./components/Autocomplete.vue'));
 Vue.component('search-result', require('./components/SearchResult.vue'));
 Vue.component('filters-row', require('./components/FiltersRow.vue'));
 
