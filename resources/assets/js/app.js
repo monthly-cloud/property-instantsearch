@@ -32,6 +32,7 @@ Vue.component('ais-form', require('./components/Form.vue'));
 Vue.component('ais-autocomplete', require('./components/Autocomplete.vue'));
 Vue.component('search-result', require('./components/SearchResult.vue'));
 Vue.component('filters-row', require('./components/FiltersRow.vue'));
+Vue.component('ais-options-menu', require('./components/Ais/OptionsMenu.vue'));
 
 const app = new Vue({
     el: '#app',
