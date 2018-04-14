@@ -32,7 +32,9 @@ Vue.component('ais-form', require('./components/Form.vue'));
 Vue.component('ais-autocomplete', require('./components/Autocomplete.vue'));
 Vue.component('search-result', require('./components/SearchResult.vue'));
 Vue.component('filters-row', require('./components/FiltersRow.vue'));
+Vue.component('ais-numeric-menu', require('./components/Ais/NumericMenu.vue'));
 Vue.component('ais-date-picker', require('./components/Ais/DatePicker.vue'));
+
 
 const app = new Vue({
     el: '#app',
