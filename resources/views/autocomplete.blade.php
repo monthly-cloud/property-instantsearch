@@ -7,13 +7,12 @@
     <div class="jumbotron">
         <div class="page-header">
             <h3>Autocomplete</h3>
+            <p>Try London, Berlin or San Francisco</p>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <ais-form>
-                        <ais-autocomplete placeholder="Where are we going ?"></autocomplete>
-                    </ais-form>
+                    <autocomplete-form href="/"></autocomplete-form>
                 </div>
             </div>
         </div>
