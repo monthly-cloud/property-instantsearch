@@ -29,6 +29,11 @@
                     <div class="row">
                         <div class="container-fluid" id="results">
                             <div class="row" id="hits">
+                                <ais-no-results>
+                                    <template slot-scope="props">
+                                    No results found.
+                                    </template>
+                                </ais-no-results>
                                 <ais-results>
                                     <template slot-scope="{ result }">
                                         <search-result :result="result"></search-result>
