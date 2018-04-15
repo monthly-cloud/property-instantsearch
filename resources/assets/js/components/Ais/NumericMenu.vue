@@ -37,7 +37,9 @@
             update() {
                 this.searchStore.stop();
                 this.searchStore.removeNumericRefinement(this.name, this.operator);
-                this.searchStore.addNumericRefinement(this.name, this.operator, this.value);
+                if (this.value.length>0) {
+                    this.searchStore.addNumericRefinement(this.name, this.operator, this.value);
+                }
                 this.searchStore.start();
                 this.searchStore.refresh();
             }
