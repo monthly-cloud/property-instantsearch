@@ -56,7 +56,11 @@
                 <!-- Right col -->
                 <div class="col-sm-5 hidden-xs aisdemo--right-column">
                     <div id="map">
-                        <gmap-map :center="{lat: 37.7577627, lng: -122.4726194}" :zoom="12">
+                        @if (!empty($request->lat) && !empty($request->lng))
+                            <gmap-map :center="{lat: {{$request->lat}}, lng: {{$request->lng}}}" :zoom="12">
+                        @else
+                            <gmap-map :center="{lat: 37.7577627, lng: -122.4726194}" :zoom="12">
+                        @endif
                             <ais-results>
                                 <template slot-scope="{ result }">
                                     <gmap-marker :position="result._geoloc"></gmap-marker>
