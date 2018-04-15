@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('search', ['request' => (object)request()->all()]);
 });
+Route::get('/legacy', function () {
+    return view('legacy', ['request' => (object)request()->all()]);
+});
 Route::get('/autocomplete', function () {
     return view('autocomplete');
 });
