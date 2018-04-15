@@ -3,24 +3,37 @@
 @section('title', 'Search')
 
 @section('content')
-    <ais-index app-id="{{config('scout.algolia.id')}}" api-key="{{config('scout.algolia.search')}}" index-name="results">
+
+    <ais-index 
+        app-id="{{config('scout.algolia.id')}}"
+        api-key="{{config('scout.algolia.search')}}"
+        index-name="results"
+        @if (!empty($request->lat) && !empty($request->lng))
+            :query-parameters="{getRankingInfo: true, aroundLatLng: '{{$request->lat}}, {{$request->lng}}'}"
+        @endif
+    >
         <div class="container-fluid" style="padding-left: 0; padding-right: 0;">
             <header class="navbar navbar-static-top aisdemo-navbar">
                 <a href="https://community.algolia.com/vue-instantsearch/" class="logo">
-                    <img src="/images/logo.svg" width=40 ></a>
-                <i class="fa fa-search"></i>
-                <ais-input placeholder="Where do you want to live?"></ais-input>
+                    <img src="/images/logo.svg" width="40">
+                </a>
             </header>
         </div>
 
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-7 aisdemo--left-column">
+
                     <filters-row>
                     </filters-row>
                     <div class="row">
                         <div class="container-fluid" id="results">
                             <div class="row" id="hits">
+                                <ais-no-results>
+                                    <template slot-scope="props">
+                                    No results found.
+                                    </template>
+                                </ais-no-results>
                                 <ais-results>
                                     <template slot-scope="{ result }">
                                         <search-result :result="result"></search-result>
@@ -43,7 +56,11 @@
                 <!-- Right col -->
                 <div class="col-sm-5 hidden-xs aisdemo--right-column">
                     <div id="map">
-                        <gmap-map :center="{lat: 37.7577627, lng: -122.4726194}" :zoom="12">
+                        @if (!empty($request->lat) && !empty($request->lng))
+                            <gmap-map :center="{lat: {{$request->lat}}, lng: {{$request->lng}}}" :zoom="12">
+                        @else
+                            <gmap-map :center="{lat: 37.7577627, lng: -122.4726194}" :zoom="12">
+                        @endif
                             <ais-results>
                                 <template slot-scope="{ result }">
                                     <gmap-marker :position="result._geoloc"></gmap-marker>
