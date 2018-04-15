@@ -9,7 +9,7 @@
         api-key="{{config('scout.algolia.search')}}"
         index-name="results"
         @if (!empty($request->lat) && !empty($request->lng))
-            :query-parameters="{getRankingInfo: true, aroundLatLng: '{{$request->lat}}, {{$request->lng}}'}"
+            :query-parameters="{getRankingInfo: true, aroundLatLng: '{{$request->lat}}, {{$request->lng}}', aroundRadius: 100000}"
         @endif
     >
         <div class="container-fluid" style="padding-left: 0; padding-right: 0;">
