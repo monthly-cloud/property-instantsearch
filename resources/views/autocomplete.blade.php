@@ -7,6 +7,7 @@
     <div class="jumbotron">
         <div class="page-header">
             <h3>Autocomplete</h3>
+            <p>Try London, Berlin or San Francisco</p>
         </div>
         <div class="container">
             <div class="row">
