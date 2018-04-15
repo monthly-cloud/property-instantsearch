@@ -3,7 +3,15 @@
 @section('title', 'Search')
 
 @section('content')
-    <ais-index app-id="{{config('scout.algolia.id')}}" api-key="{{config('scout.algolia.search')}}" index-name="results">
+
+    <ais-index 
+        app-id="{{config('scout.algolia.id')}}"
+        api-key="{{config('scout.algolia.search')}}"
+        index-name="results"
+        @if (!empty($request->lat) && !empty($request->lng))
+            :query-parameters="{getRankingInfo: true, aroundLatLng: '{{$request->lat}}, {{$request->lng}}'}"
+        @endif
+    >
         <div class="container-fluid" style="padding-left: 0; padding-right: 0;">
             <header class="navbar navbar-static-top aisdemo-navbar">
                 <a href="https://community.algolia.com/vue-instantsearch/" class="logo">
@@ -16,6 +24,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-7 aisdemo--left-column">
+
                     <filters-row>
                     </filters-row>
                     <div class="row">
