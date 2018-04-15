@@ -1,6 +1,6 @@
 <template>
     <div>
-         <autocomplete :placeholder="placeholder" @change="redirect"></autocomplete>
+         <autocomplete-places :placeholder="placeholder" @change="redirect"></autocomplete-places>
     </div>
 </template>
  
