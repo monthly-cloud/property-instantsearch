@@ -15,7 +15,8 @@ Vue.use(AlgoliaComponents);
 import * as VueGoogleMaps from 'vue2-google-maps';
 Vue.use(VueGoogleMaps, {
     load: {
-        key: 'AIzaSyBvWE_sIwKbWkiuJQOf8gSk9qzpO96fhfY',
+        key: 'AIzaSyAvLe-ommYqRPIyjGHM_W_DIhQfCt5b0kA',
+        libraries: 'places'
     }
 });
 
@@ -28,8 +29,8 @@ import { store } from './store/store';
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('ais-form', require('./components/Form.vue'));
-Vue.component('ais-autocomplete', require('./components/Autocomplete.vue'));
+Vue.component('autocomplete-form', require('./components/Autocomplete/Form.vue'));
+Vue.component('autocomplete-places', require('./components/Autocomplete/Places.vue'));
 Vue.component('search-result', require('./components/SearchResult.vue'));
 Vue.component('filters-row', require('./components/FiltersRow.vue'));
 Vue.component('ais-numeric-menu', require('./components/Ais/NumericMenu.vue'));
