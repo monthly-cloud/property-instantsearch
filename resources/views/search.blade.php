@@ -15,9 +15,8 @@
         <div class="container-fluid" style="padding-left: 0; padding-right: 0;">
             <header class="navbar navbar-static-top aisdemo-navbar">
                 <a href="https://community.algolia.com/vue-instantsearch/" class="logo">
-                    <img src="/images/logo.svg" width=40 ></a>
-                <i class="fa fa-search"></i>
-                <ais-input placeholder="Where do you want to live?"></ais-input>
+                    <img src="/images/logo.svg" width="40">
+                </a>
             </header>
         </div>
 
