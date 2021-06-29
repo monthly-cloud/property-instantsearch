@@ -3,6 +3,8 @@
 [![Join the chat at https://gitter.im/monthly-cloud/property-instantsearch](https://badges.gitter.im/monthly-cloud/property-instantsearch.svg)](https://gitter.im/monthly-cloud/property-instantsearch?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 InstantSearch.js + Vue for property listings
 
+# This project is deprecated.
+
 [Demo available here](http://property-instantsearch.monthly.cloud/)
 
 # Requirements
@@ -26,12 +28,6 @@ npm install
 Build fron-end:
 ```
 npm run dev
-```
-
-Setup your .env files with:
-```
-ALGOLIA_APP_ID=2HAXEGZ41H
-ALGOLIA_SEARCH=5200e463393ec7e08e44d56bad01a7d2
 ```
 
 Run it
