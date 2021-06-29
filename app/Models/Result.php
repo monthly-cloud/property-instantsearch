@@ -3,8 +3,8 @@
 namespace App\Models;
 
 use Carbon\Carbon;
-use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Result extends Model
 {
